@@ -80,17 +80,17 @@ namespace TipCalculator
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (TextBoxBill.Text == "0")
+            if (TextBoxBill.Text == "")
             {
                 MessageBox.Show("Enter the Bill");
                 TextBoxBill.Focus();
             }
-            else if(TextBoxPerson.Text == "0")
+            else if(TextBoxPerson.Text == "")
             {
                 MessageBox.Show("Enter the Number of Person");
                 TextBoxPerson.Focus();
             }
-            else if (TextBoxTipPersent.Text == "0")
+            else if (TextBoxTipPersent.Text == "")
             {
                 MessageBox.Show("Enter the Tip Persentage");
                 TextBoxTipPersent.Focus();
@@ -107,11 +107,11 @@ namespace TipCalculator
                 TotalBill = TotalTip + Bill;
                 PerPersonTip = TotalTip / Convert.ToDouble(TotalPerson);
 
-                labelBill.Text = Bill.ToString();
-                labelPerPersonTip.Text = PerPersonTip.ToString();
-                labelTotalBills.Text = TotalBill.ToString();
-                labelTotalTip.Text = TotalTip.ToString();
-                labelTotalPerson.Text = TotalPerson.ToString();
+                labelBill.Text = Bill.ToString()+" $";
+                labelPerPersonTip.Text = PerPersonTip.ToString() + " $";
+                labelTotalBills.Text = TotalBill.ToString() + " $";
+                labelTotalTip.Text = TotalTip.ToString() + " $";
+                labelTotalPerson.Text = TotalPerson.ToString() + " $";
 
                 string HistorySaveQuery = "INSERT INTO tip_calculator_history " +
                     "(bill, tip_persentage, total_tip, total_bill, total_person, tip_per_person, bill_time) " +

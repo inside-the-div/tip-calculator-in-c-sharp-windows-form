@@ -105,10 +105,10 @@ namespace TipCalculator
 
                 TotalTip = (TipPersentage / 100) * Bill;
                 TotalBill = TotalTip + Bill;
-                PerPersonTip = TotalTip / Convert.ToDouble(TotalPerson);
+                PerPersonTip = TotalBill / Convert.ToDouble(TotalPerson);
 
                 labelBill.Text = Bill.ToString()+" $";
-                labelPerPersonTip.Text = PerPersonTip.ToString() + " $";
+                labelPerPersonTip.Text = PerPersonTip.ToString("N2") + " $";
                 labelTotalBills.Text = TotalBill.ToString() + " $";
                 labelTotalTip.Text = TotalTip.ToString() + " $";
                 labelTotalPerson.Text = TotalPerson.ToString() + " $";

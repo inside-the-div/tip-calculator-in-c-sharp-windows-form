@@ -14,7 +14,7 @@ namespace TipCalculator
 {
     public partial class History : Form
     {
-        SqlConnection DBconnection = new SqlConnection("Data Source=.; Initial Catalog = tip_calculator_db; TrustServerCertificate=True; Integrated Security=True ");
+        SqlConnection DBconnection = new SqlConnection(Properties.Settings.Default.con);
         public History()
         {
             InitializeComponent();
